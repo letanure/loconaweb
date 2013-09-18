@@ -1,0 +1,40 @@
+<div>
+  <h2 class="titDots">Cupons</h2>
+  <p>
+    Consulte a lista de cupons abaixo. Se deseja fazer o upload de um arquivo CSV com novos cupons, clique no botão a seguir e siga as instruções:
+  </p>
+  <a href="#form-cupons-upload-area" id="button-toggle-upload" class="btn btn-primary">Fazer upload</a>
+</div>
+
+<div id="form-cupons-upload-area" class="obsGray">
+  <div class="boxWhite">
+    <h6>Informe os campos a seguir</h6>
+    <br />
+    <form id="form-cupons-upload">
+      <fieldset class="row">
+        <label id="label-file-csv" class="span3">
+          <span>Arquivo <acronym title="Comma-separated values">CSV</acronym></span>
+          <input type="file" id="coupons-csv" name="csv" required accept=".csv" />
+          <button type="button" class="btn">Selecionar</button>
+        </label>
+        <label class="span3">
+          <span>Tipo de cupom</span>
+            <select name="type" class="span3" required>
+              <option>Selecione</option>
+              <option value="1">Registro de domínios</option>
+              <option value="2">Hospedagem</option>
+              <option value="3">E-mail Marketing</option>
+              <option value="4">Criar outro tipo</option>
+            </select>
+        </label>
+        <label class="span3">
+          <span>Data de expiração</span>
+          <input class="datepicker span2" name="expiration" size="10" type="text" pattern="(0[1-9]|1[012])[- /.](0[1-9]|[12][0-9]|3[01])[- /.](19|20)\d\d" required>
+        </label>
+        <a href="#" rel="popover" data-content="<b>Atenção:</b> a data de expiração precisa ser no mínimo a partir de 30 dias da data de hoje." data-html="true" class="infoHelp"></a>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Confirmar upload do CSV</button>
+      <button type="button" id="button-close-upload" class="btn">Cancelar</button>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <title>Cupons</title>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta content="authenticity_token" name="csrf-param">
+
+    <!-- Atenção à versao do locastyle, 1.1.9 -->
+    <link href="http://assets.locaweb.com.br/locastyle/1.1.9/bootstrap.css" media="screen" rel="stylesheet" type="text/css">
+    <link href="http://assets.locaweb.com.br/locastyle/1.1.9/locastyle.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="http://assets.locaweb.com.br/locastyle/1.1.9/locastyle.js" type="text/javascript"></script>
+    <script src="http://assets.locaweb.com.br/locastyle/1.1.9/bootstrap.js" type="text/javascript"></script>
+
+    <!-- CSS e JS de cupons -->
+    <link href="coupons-style.css" media="screen" rel="stylesheet" type="text/css">
+    <script src="coupons-script.js" type="text/javascript"></script>
+
+  </head>
+  <body class="colorAqua">
+  <div id="toolbar">
+    <div class="limitToolbar">
+      <h1 class="logoToolbar">Central de Cupons</h1>
+    </div>
+  </div>
+  <header id="header" role="banner">
+    <div class="accessibility">
+      <a href="#" tabindex="1" class="lnkContent">Ir para o conteúdo</a>
+    </div>
+    <div class="limit">
+      <h1 class="serviceName"><a href="/">Central de Cupons</a></h1>
+    </div>
+    <menu id="menuPrincipal" role="navigation">
+      <ul>
+        <li class="selected"><a href="/" class="ico-home" tabindex="2" role="menuitem">Página inicial</a></li>
+      </ul>
+    </menu>
+  </header>
+  <div id="main">
+    <div class="limite">
+      
+      <%= render 'breadcrumb' %>
+      
+      <!-- Atenção ao ID, para o escopo dos seletores jQuery -->
+      <div id="coupons" class="row">
+        <div class="span12">
+
+          <%= render 'alert' %>
+          
+          <%= render 'upload' %>
+
+          <%= render 'search' %>
+
+          <%= render 'list' %>
+
+        </div>
+
+        <%= render 'sidebar' %>
+
+      </div>
+    </div>
+
+    <%= render 'footer' %>
+
+  </div>
+</body>
+</html> 
